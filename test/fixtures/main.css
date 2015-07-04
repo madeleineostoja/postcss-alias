@@ -1,0 +1,17 @@
+@alias {
+  fs: font-size;
+  fw: font-weight;
+  bg: background;
+}
+
+.foo {
+  fs: 16px;
+  fw: 400;
+  bg: #fff;
+}
+
+.bar {
+  fg: 16px;
+  fd: 400;
+  bn: #fff;
+}

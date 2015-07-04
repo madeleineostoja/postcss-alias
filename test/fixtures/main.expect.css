@@ -1,0 +1,11 @@
+.foo {
+  font-size: 16px;
+  font-weight: 400;
+  background: #fff;
+}
+
+.bar {
+  fg: 16px;
+  fd: 400;
+  bn: #fff;
+}
