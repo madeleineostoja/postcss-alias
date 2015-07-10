@@ -7,7 +7,9 @@ var postcss = require('postcss'),
     path = require('path'),
     plugin = require('../');
 
-var test = function (input, expected, opts, done) {
+var test = function (fixture, opts, done) {
+  var input = fixture + '.css',
+      expected = fixture + '.expected.css';
 
   input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
   expected = fs.readFileSync(path.join(__dirname, 'fixtures', expected), 'utf8');
@@ -27,11 +29,15 @@ var test = function (input, expected, opts, done) {
 describe('postcss-alias', function () {
 
   it('expands multiple aliases', function (done) {
-   test('main.css', 'main.expect.css', { }, done);
+   test('main', { }, done);
   });
 
-   it('handles edge cases', function (done) {
-   test('edge.css', 'edge.expect.css', { }, done);
+  it('handles edge cases', function (done) {
+   test('edge', { }, done);
+  });
+
+  it('expands aliases in values', function (done) {
+   test('val', { }, done);
   });
 
 });
