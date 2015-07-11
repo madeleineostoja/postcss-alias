@@ -21,12 +21,20 @@ module.exports = postcss.plugin('postcss-alias', function () {
     // Build the alias expander
     var expander = function(alias){
 
-      css.eachDecl(alias.name, function(decl){
+      // Look for the alias in each decl
+      css.eachDecl(function(decl){
 
+        // Check decleration property
+        if (decl.prop === alias.name) {
+          decl.cloneBefore({ prop: alias.property, value: decl.value });
+          decl.removeSelf();
+        }
 
-        // Clone to expanded rule, then remove alias version
-        decl.cloneBefore({ prop: alias.property, value: decl.value });
-        decl.removeSelf();
+        // Check decleration value
+        if (decl.value.indexOf(alias.name) > -1) {
+          decl.value = decl.value.replace(alias.name, alias.property);
+        }
+
 
       });
 
