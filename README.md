@@ -13,7 +13,7 @@
 .foo {
   fs: 16px;
   fw: 400;
-  bg: #fff;
+  transition: bg 200ms ease;
 }
 ```
 
@@ -21,7 +21,7 @@
 .foo {
   font-size: 16px;
   font-weight: 400;
-  background: #fff;
+  transition: background 200ms ease;
 }
 ```
 
