@@ -18,7 +18,10 @@ module.exports = postcss.plugin('postcss-alias', function () {
 
     });
 
-    // Build the alias expander
+    /**
+     * Alias expander, takes an alias and expands to the relevant decleration/value
+     * @param  {string} alias the alias to expand
+     */
     var expander = function(alias){
 
       // Look for the alias in each decl
