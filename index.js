@@ -34,7 +34,8 @@ module.exports = postcss.plugin('postcss-alias', function () {
 
         // Check decleration value
         if (decl.value.indexOf(alias.name) > -1) {
-          decl.value = decl.value.replace(alias.name, alias.property);
+          var aliasRegex = new RegExp('\\b(\\(|:)?(' + alias.name + ')(\\(|:)?\\b');
+          decl.value = decl.value.replace(aliasRegex, alias.property);
         }
 
       });

@@ -2,10 +2,12 @@
   fs: font-size;
   fw: font-weight;
   bg: background;
+  f: foo;
 }
 
 .foo {
   fs: 16px;
+  f: bar;
 }
 
 .foo {
