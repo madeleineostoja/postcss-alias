@@ -1,7 +1,9 @@
-# postcss-alias 
+# PostCSS Alias
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
-[PostCSS] plugin that lets you create custom aliases for CSS properties with an `@alias` rule.
+[PostCSS][PostCSS] plugin that lets you create custom aliases for CSS properties with an `@alias` rule.
+
+Part of [Rucksack - CSS Superpowers](http://simplaio.github.io/rucksack).
 
 ```css
 @alias {
@@ -33,7 +35,7 @@
 postcss([ require('postcss-alias') ])
 ```
 
-See [PostCSS] docs for examples for your environment.
+See [PostCSS][PostCSS] docs for examples for your environment.
 
 --
 
@@ -48,4 +50,3 @@ MIT © [Sean King](https://twitter.com/seaneking)
 [daviddm-image]: https://david-dm.org/seaneking/postcss-alias.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/seaneking/postcss-alias
 [PostCSS]: https://github.com/postcss/postcss
-
