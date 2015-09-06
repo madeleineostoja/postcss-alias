@@ -7,14 +7,14 @@ module.exports = postcss.plugin('postcss-alias', function () {
 
     // Build array of aliases
     var aliases = [];
-    css.eachAtRule('alias', function(rule){
+    css.walkAtRules('alias', function(rule){
 
-      rule.eachDecl(function(decl){
+      rule.walkDecls(function(decl){
         aliases.push({ name: decl.prop, property: decl.value });
       });
 
       // Remove @alias when we're done
-      rule.removeSelf();
+      rule.remove();
 
     });
 
@@ -25,7 +25,7 @@ module.exports = postcss.plugin('postcss-alias', function () {
     var expander = function(alias){
 
       // Look for the alias in each decl
-      css.eachDecl(function(decl){
+      css.walkDecls(function(decl){
 
         // Check decleration property
         if (decl.prop === alias.name) {
