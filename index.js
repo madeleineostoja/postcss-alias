@@ -29,7 +29,7 @@ module.exports = postcss.plugin('postcss-alias', function () {
 
         // Check decleration property
         if (decl.prop === alias.name) {
-          decl.replaceWith({ prop: alias.property, value: decl.value });
+          decl.replaceWith({ prop: alias.property, value: decl.value, important: decl.important });
         }
 
         // Check decleration value

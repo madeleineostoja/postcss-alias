@@ -6,15 +6,14 @@
 }
 
 .foo {
-  fs: 16px;
+  fs: 16px !important;
   f: bar;
 }
 
 .foo {
   fw: 400;
   fw: 700;
-  fs: 20px;
-  bg: url('http://lorempixel.com/400/600') center center no-repeat;
+  transition: bg 200ms ease !important;
 }
 
 .bar {
