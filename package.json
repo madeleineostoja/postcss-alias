@@ -1,6 +1,6 @@
 {
   "name": "postcss-alias",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "PostCSS plugin that lets you create custom aliases for CSS properties with an @rule",
   "keywords": [
     "postcss",
