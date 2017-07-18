@@ -1,16 +1,13 @@
 .foo {
   font-size: 16px !important;
-  foo: bar;
 }
 
 .foo {
   font-weight: 400;
   font-weight: 700;
-  transition: background 200ms ease !important;
+  transition: bg 200ms ease !important;
 }
 
 .bar {
   fg: 16px;
-  fd: 400;
-  bn: #fff;
 }

@@ -28,16 +28,12 @@ var test = function (fixture, opts, done) {
 
 describe('postcss-alias', function () {
 
-  it('expands multiple aliases', function (done) {
+  it('expands aliases', function (done) {
    test('main', { }, done);
   });
 
   it('handles edge cases', function (done) {
    test('edge', { }, done);
-  });
-
-  it('expands aliases in values', function (done) {
-   test('val', { }, done);
   });
 
 });

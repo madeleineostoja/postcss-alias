@@ -1,7 +1,0 @@
-@alias {
-  bg: background;
-}
-
-.foo {
-  transition: bg 200ms ease;
-}
