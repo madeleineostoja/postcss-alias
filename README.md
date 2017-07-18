@@ -5,29 +5,28 @@
 
 Part of [Rucksack - CSS Superpowers](http://simplaio.github.io/rucksack).
 
+_Input_
 ```css
 @alias {
   fs: font-size;
-  fw: font-weight;
   bg: background;
 }
 
-.foo {
+.aliased {
   fs: 16px;
-  fw: 400;
-  transition: bg 200ms ease;
+  bg: white;
 }
 ```
 
+_Output_
 ```css
-.foo {
+.aliased {
   font-size: 16px;
-  font-weight: 400;
-  transition: background 200ms ease;
+  background: white;
 }
 ```
 
---
+> **Note:** Aliases in property values (eg: `transition: bg 200ms`) are not supported
 
 ### Usage
 
@@ -37,9 +36,7 @@ postcss([ require('postcss-alias') ])
 
 See [PostCSS][PostCSS] docs for examples for your environment.
 
---
-
-### License
+***
 
 MIT © [Sean King](https://twitter.com/seaneking)
 
