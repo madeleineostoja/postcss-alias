@@ -27,6 +27,10 @@ module.exports = postcss.plugin('postcss-alias', function () {
         if (decl.prop === alias.name) {
           decl.replaceWith({ prop: alias.property, value: decl.value, important: decl.important });
         }
+        if (decl.value === alias.name) {
+          console.error('You can not use alias as property values.');
+          throw 'You can not use alias as property values.';
+        }
 
       });
 
