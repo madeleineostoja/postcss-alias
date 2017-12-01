@@ -4,6 +4,12 @@
 [PostCSS][PostCSS] plugin that lets you create custom aliases for CSS properties with an `@alias` rule.
 
 Part of [Rucksack - CSS Superpowers](http://simplaio.github.io/rucksack).
+### Installing
+```
+npm i postcss-alias --save-dev
+```
+
+### Example
 
 _Input_
 ```css
