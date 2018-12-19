@@ -28,13 +28,28 @@ _Output_
 
 > **Note:** Aliases in property values (eg: `transition: bg 200ms`) are not supported
 
+### Options
+
+#### `aliases`
+
+An optional object map of aliases to declare. Aliases declared in the CSS have precedence.
+
 ### Usage
 
 ```js
-postcss([ require('postcss-alias') ])
+postcss([
+  require('postcss-alias')({
+    aliases: {
+      fs: 'font-size',
+      fw: 'font-weight',
+      bg: 'background'
+    }
+  })
+])
 ```
 
 See [PostCSS][PostCSS] docs for examples for your environment.
+
 
 ***
 
