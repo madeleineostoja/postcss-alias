@@ -36,4 +36,28 @@ describe('postcss-alias', function () {
    test('edge', { }, done);
   });
 
+  it('use option aliases', function (done) {
+   test('option', {
+     aliases: {
+       fs: 'font-size',
+       fw: 'font-weight',
+       bg: 'background'
+     }
+   }, done);
+  });
+
+  it('override option aliases', function (done) {
+   test('option-override', {
+     aliases: {
+       fs: 'font-size',
+       fw: 'font-weight',
+       bg: 'background'
+     }
+    }, done);
+  });
+
+  it('pass no option', function (done) {
+    test('main', undefined, done);
+  });
+
 });

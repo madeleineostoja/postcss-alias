@@ -1,0 +1,9 @@
+@alias {
+  fs: font-style;
+}
+
+.foo {
+  fs: italic;
+  fw: 400;
+  bg: #fff;
+}
