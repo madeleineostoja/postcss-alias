@@ -4,7 +4,7 @@ var postcss = require('postcss');
 
 module.exports = postcss.plugin('postcss-alias', function (options) {
   return function (css) {
-
+    options = typeof options === 'object' ? options : {};
     var aliases = typeof options.aliases  === 'object' ? options.aliases : {};
 
     css.walkAtRules('alias', function(rule){

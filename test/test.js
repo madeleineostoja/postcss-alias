@@ -56,4 +56,8 @@ describe('postcss-alias', function () {
     }, done);
   });
 
+  it('pass no option', function (done) {
+    test('main', undefined, done);
+  });
+
 });
